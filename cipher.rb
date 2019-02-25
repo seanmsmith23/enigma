@@ -48,17 +48,17 @@ class Cipher
 
   def find_offset(index)
     # modulo by 4 to keep index below four and avoid weirdness with divisible by 3s and 2s
-    normalized_index = ((index % 4) + 1)
+    normalized_index = index % 4
 
     index_to_offset[normalized_index]
   end
 
   def index_to_offset
     {
-      1 => :a,
-      2 => :b,
-      3 => :c,
-      4 => :d
+      0 => :a,
+      1 => :b,
+      2 => :c,
+      3 => :d
     }
   end
 
